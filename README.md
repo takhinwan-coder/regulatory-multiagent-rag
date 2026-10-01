@@ -1,6 +1,6 @@
 # Multi-Agent RAG System for Regulatory Policy Change Management
 
-This repository currently contains a minimal, single-agent PDF RAG foundation. It loads local PDFs, indexes their chunks in ChromaDB using OpenAI embeddings, and answers questions with source/page citations.
+This repository currently contains a minimal, single-agent PDF RAG foundation for the capstone. It loads local PDFs, indexes their chunks in ChromaDB using OpenAI embeddings, and answers questions with source/page citations. The [project blueprint](PROJECT_BLUEPRINT.md) outlines the proposed scope, architecture, and phased path toward regulatory change analysis with multiple agents; LLMOps evaluation is deferred.
 
 ## Project layout
 
