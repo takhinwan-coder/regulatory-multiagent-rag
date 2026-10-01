@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "regulatory-multiagent-rag"
+version = "0.1.0"
+description = "A minimal PDF retrieval-augmented generation system for regulatory documents"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain-chroma>=0.2,<2",
+    "langchain-community>=0.3,<2",
+    "langchain-openai>=0.2,<2",
+    "langchain-text-splitters>=0.3,<2",
+    "pypdf>=6.14.2,<7",
+    "python-dotenv>=1,<2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
