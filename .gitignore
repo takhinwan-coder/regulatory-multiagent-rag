@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+chroma_db/
+data/chroma_db/
+data/pdfs/**/*.pdf
+data/pdfs/*.pdf
