@@ -1,6 +1,14 @@
 # Project Blueprint: Multi-Agent RAG for Regulatory Policy Change Management
 
-Use this as a working capstone draft. The first implementation is intentionally a small, single-agent RAG system; the multi-agent workflow is a later project milestone. The architecture follows the core infrastructure pattern described for this project: document processing and embeddings, vector retrieval, LLM-grounded generation, and a user-facing interface. The separate LLMOps/evaluation layer is deferred.
+Use this as a working capstone draft. The initial pilot concerns HKMA prudential supervisory materials. The architecture combines document processing and embeddings, controlled version comparison, retrieval-grounded generation, and human review. Formal LLMOps and production deployment remain out of scope.
+
+> **Overarching principle: Retrieve broadly; read precisely; draft conservatively; verify explicitly.**
+
+## System workflow visual
+
+The living [HKMA regulatory change workflow diagram](docs/hkma-regulatory-change-workflow.svg) presents the complete intended end-to-end flow, human decision gates, rework loops, release, and audit record. Update the SVG whenever the workflow changes.
+
+The companion [HKMA RAG system workflow diagram](docs/hkma-rag-system-workflow.svg) presents the technical lifecycle behind that process: document ingestion, structure-aware chunking, embeddings and index creation, retrieval, grounded generation, human approval, and the evaluation loop.
 
 ## 1. Project summary
 
@@ -14,25 +22,27 @@ Organizations must keep up with regulatory publications and understand what has 
 
 ### Aim
 
-Design and prototype a retrieval-augmented system that finds relevant passages in regulatory documents and presents evidence-backed answers, with a path to multi-agent change analysis.
+Design and prototype a human-in-the-loop retrieval-augmented workflow that compares regulatory versions, finds relevant evidence, and presents reviewable potential policy impacts.
 
 ### Proposed objectives
 
 1. Ingest a controlled set of regulatory PDFs, preserve document and page provenance, and index searchable text.
 2. Retrieve relevant passages for a user question and generate an answer grounded in those passages.
 3. Show citations that let a user verify each answer against the source document.
-4. Extend the baseline into a coordinated multi-agent workflow for comparing regulatory changes and identifying potential policy impacts.
-5. Document the system's boundaries, assumptions, and limitations.
+4. Compare selected regulatory document versions reproducibly and preserve the resulting change evidence.
+5. Require a reviewer to confirm or supplement the affected-document scope before drafting is considered.
+6. Extend the controlled workflow into specialized change, obligation, impact-mapping, drafting, and evidence-checking stages.
+7. Document the system's boundaries, assumptions, and limitations.
 
 ### Research question (draft)
 
-> How can a citation-grounded RAG workflow help users identify and explain potential policy impacts of regulatory changes?
+> How can a human-in-the-loop, citation-grounded RAG workflow help users identify and review potential policy impacts of changes to HKMA prudential regulatory materials?
 
 Refine this question once the target jurisdiction, document collection, and intended user group are agreed.
 
 ## 2. Scope
 
-### Build first: core RAG
+### Current implementation
 
 - Load local PDF files.
 - Split extracted text into overlapping chunks while retaining source and page metadata.
@@ -40,15 +50,31 @@ Refine this question once the target jurisdiction, document collection, and inte
 - Retrieve relevant chunks for a question.
 - Generate an answer using retrieved context, and display the source file and page citations.
 - Provide a simple command-line query interface.
+- Record regulatory source/version metadata at ingestion.
+- Compare two selected PDF versions using a deterministic page-level text diff.
+- Persist a human review decision that confirms or supplements the candidate document scope.
 
-### Add after the core works: multi-agent regulatory workflow
+### Next: controlled hybrid retrieval and analysis workflow
 
-- Represent a regulatory change as a comparison between an earlier and newer source.
-- Use separately scoped agent roles, for example: change extraction, obligation analysis, policy-impact mapping, and evidence checking.
-- Pass source excerpts and citations between steps; make the final synthesis distinguish evidence from inference and uncertainty.
-- Keep a human reviewer responsible for accepting or rejecting suggested impacts.
+- Parse provision structure and retain heading, provision, and parent-section relationships.
+- Use metadata-filtered lexical and semantic retrieval, then rerank and expand to complete governing context.
+- Identify candidate internal documents, but require the user to confirm, exclude, or supplement them before drafting.
+- Pass source excerpts and citations between stages; make the final synthesis distinguish evidence from inference and uncertainty.
 
-These are proposed roles, not agents that the current code already implements. Start by proving the ingestion, retrieval, and citation path before splitting work across agents.
+### Later: specialized multi-stage workflow
+
+Use specialized stages only where their different tools, retrieval scopes, evidence standards, and outputs provide a control benefit:
+
+1. source/version validation;
+2. deterministic change extraction;
+3. obligation analysis;
+4. policy-impact mapping;
+5. reviewer scope approval;
+6. drafting options or controlled redlines;
+7. evidence and consistency checking; and
+8. human approval.
+
+These stages should start as a sequential workflow with evidence-carrying hand-offs. They are not a justification for unbounded autonomous agents.
 
 ### Defer: LLMOps and formal evaluation
 
@@ -60,24 +86,30 @@ Do not build an experiment-tracking, monitoring, automated LLM-judge, or product
 PDF files
    │
    ▼
-Load pages → split into chunks → attach provenance → create embeddings
+Load pages → attach source/version provenance → structure-aware chunking → create embeddings
                                               │
                                               ▼
                                       Persistent ChromaDB
 
-User question → embed/search → retrieve relevant chunks
+Selected old/new sources → deterministic comparison → change report
+                                              │
+                                              ▼
+Candidate internal documents → human review and scope decision
+                                              │
+                                              ▼
+User question or approved task → metadata filter + lexical/vector search
                                       │
                                       ▼
-                         Prompt with question + evidence
+                         Rerank + expand to parent/related provisions
                                       │
                                       ▼
-                         LLM-grounded answer + citations
+                         Evidence-grounded answer or reviewable draft option
                                       │
                                       ▼
-                              CLI / future UI
+                         Human approval before a controlled amendment
 ```
 
-The first version keeps the vector store local and uses OpenAI for embeddings and answer generation. The current repository already contains the PDF ingestion, chunking, ChromaDB, query, and CLI foundation. It does not yet compare document versions, orchestrate agents, or provide a web interface.
+The first version keeps the vector store local and uses OpenAI for embeddings and answer generation. The current repository contains the PDF ingestion, metadata-aware Chroma indexing, cited query path, deterministic PDF comparison, and CLI review-scope gate. It does not yet parse legal provisions structurally, provide hybrid retrieval, identify policy candidates automatically, generate drafts/redlines, or provide a web interface.
 
 ## 4. Component outline
 
@@ -89,7 +121,10 @@ The first version keeps the vector store local and uses OpenAI for embeddings an
 | Retrieval and answer generation | Retrieve passages, prompt the LLM, format source citations | `src/regulatory_rag/query.py` |
 | Configuration | Read model, paths, and chunk/retrieval settings | `src/regulatory_rag/config.py`, `.env` |
 | User interface | Trigger ingestion and ask questions | `src/regulatory_rag/cli.py` |
-| Agent orchestration | Coordinate future change-analysis roles | To be designed after baseline |
+| Version comparison | Compare selected regulatory PDF versions reproducibly | `src/regulatory_rag/change_workflow.py` |
+| Review scope | Record the reviewer-approved internal-document scope | `src/regulatory_rag/change_workflow.py`, `src/regulatory_rag/cli.py` |
+| Source metadata | Validate document identity, authority, and version fields | `src/regulatory_rag/metadata.py` |
+| Specialized workflow | Coordinate later change-analysis roles | To be designed after hybrid retrieval |
 | LLMOps / formal evaluation | Track experiments and assess quality systematically | Explicitly deferred |
 
 ## 5. Initial functional requirements
@@ -101,18 +136,22 @@ The first version keeps the vector store local and uses OpenAI for embeddings an
 - **Grounded response:** Instruct the model to answer from retrieved excerpts and say when evidence is insufficient.
 - **Citations:** Display source filenames and human-readable page numbers alongside numbered citations.
 - **Configuration:** Keep API credentials outside source control and allow paths and model settings to be configured.
+- **Source metadata:** Validate source path, document identifier, title, jurisdiction, regulator, type, and version before adding available metadata to chunk records.
+- **Version comparison:** Persist a deterministic report for two explicitly selected source PDFs.
+- **Human review:** Persist the documents selected by a reviewer before a later drafting task may use them.
 
-For a later regulatory-focused iteration, consider capturing jurisdiction, regulator, publication date, effective date, document version, and superseded-document relationships. These fields require a defined metadata source and are not guaranteed by the current prototype.
+The current chunker remains character-based. Provision-aware hierarchical chunks and parent-section expansion are required before drafting or high-precision policy impact claims.
 
 ## 6. Suggested implementation roadmap
 
-1. **Baseline and data selection:** Choose a small, permitted PDF corpus; record its source, jurisdiction, and version. Run the existing `ingest` and `ask` commands.
-2. **Core RAG walkthrough:** Verify that a question retrieves useful passages, answers stay within the evidence, and source/page citations resolve to the PDFs.
-3. **Regulatory metadata:** Decide which metadata is necessary and add it consistently to document chunks and citations.
-4. **Change-analysis workflow:** Add a way to select two versions of a regulatory document and identify candidate additions, removals, or amendments.
-5. **Multi-agent workflow:** Define each role's input, output, evidence requirements, and hand-off; begin with the smallest useful set of agents.
-6. **User review and presentation:** Present proposed impacts and evidence clearly, with an explicit review/confirmation step. Keep the CLI until a UI is justified.
-7. **Later work:** Define evaluation questions and a LLMOps approach as a separate phase, outside the current scope.
+1. **Pilot corpus:** Select a small, permitted set of versioned HKMA prudential materials; complete the source metadata registry.
+2. **Baseline validation:** Verify ingestion, citations, source metadata, PDF comparison, and reviewer scope records on the selected corpus.
+3. **Structured ingestion:** Extract headings/provisions and create hierarchical chunks with parent/adjacent context.
+4. **Hybrid retrieval:** Add metadata filtering, lexical retrieval, semantic retrieval, reranking, and context expansion.
+5. **Policy-impact mapping:** Produce candidate internal documents/sections with evidence, then use the existing reviewer scope gate.
+6. **Drafting workflow:** Generate evidence-linked amendment options only for approved documents and introduce an evidence-checking stage.
+7. **Evaluation:** Hold out a later HKMA version; compare detected changes and proposed intent with that version without placing it in the retrieval corpus.
+8. **Later work:** Define LLMOps and deployment separately.
 
 ## 7. Risks and design principles
 
@@ -120,12 +159,15 @@ For a later regulatory-focused iteration, consider capturing jurisdiction, regul
 - PDF extraction can omit tables, footnotes, or scanned content. Record corpus limitations and decide later whether OCR or table extraction is needed.
 - Similarity search may miss relevant passages or retrieve adjacent but irrelevant material. Treat generated impact suggestions as candidates, not legal conclusions.
 - Regulatory wording, effective dates, and document versions matter. Avoid comparing documents without establishing which versions and dates are being used.
+- A page-level PDF diff is an extraction aid, not a reliable interpretation of tables, images, footnotes, or legal drafting intent.
+- Long model context complements retrieval only after source versions and the full governing context have been selected.
+- Do not allow a system to draft an amendment until a human has approved the internal-document scope.
 - Do not place confidential or restricted documents in an external API unless their use is authorized.
 - Keep a human reviewer in the loop for compliance or policy-impact decisions.
 
 ## 8. Decisions to fill in
 
-- Target jurisdiction(s) and regulator(s):
+- Target jurisdiction(s) and regulator(s): Hong Kong / Hong Kong Monetary Authority (HKMA)
 - Intended user / organization:
 - Initial document corpus and permission to use it:
 - How will the previous and current versions of a regulation be identified?

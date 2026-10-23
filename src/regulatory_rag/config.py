@@ -23,6 +23,7 @@ class Settings:
     collection_name: str
     chroma_directory: Path
     pdf_directory: Path
+    document_metadata_file: Path
     chunk_size: int
     chunk_overlap: int
     retrieval_k: int
@@ -46,6 +47,9 @@ def get_settings() -> Settings:
         collection_name=os.getenv("CHROMA_COLLECTION", "regulatory_documents"),
         chroma_directory=_project_path(os.getenv("CHROMA_DIRECTORY", "data/chroma_db")),
         pdf_directory=_project_path(os.getenv("PDF_DIRECTORY", "data/pdfs")),
+        document_metadata_file=_project_path(
+            os.getenv("DOCUMENT_METADATA_FILE", "data/document_metadata.json")
+        ),
         chunk_size=chunk_size,
         chunk_overlap=chunk_overlap,
         retrieval_k=retrieval_k,

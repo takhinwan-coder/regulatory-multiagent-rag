@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1400" viewBox="0 0 1800 1400" role="img" aria-labelledby="title description">
+  <title id="title">HKMA regulatory RAG system workflow</title>
+  <desc id="description">The technical workflow for regulatory queries and document ingestion, from source intake and embedding to hybrid retrieval, governed generation, output, and evaluation feedback.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fbf4e9"/>
+      <stop offset="52%" stop-color="#f7e9da"/>
+      <stop offset="100%" stop-color="#f4e4d4"/>
+    </linearGradient>
+    <radialGradient id="warmGlow" cx="0" cy="0" r="1" gradientTransform="translate(1500 145) rotate(135) scale(520 410)">
+      <stop offset="0%" stop-color="#e2a145" stop-opacity=".24"/>
+      <stop offset="100%" stop-color="#e2a145" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="roseGlow" cx="0" cy="0" r="1" gradientTransform="translate(240 1230) rotate(45) scale(530 410)">
+      <stop offset="0%" stop-color="#c7634b" stop-opacity=".14"/>
+      <stop offset="100%" stop-color="#c7634b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="terracotta" x1="0" x2="1">
+      <stop offset="0%" stop-color="#b94f3c"/>
+      <stop offset="100%" stop-color="#d6784e"/>
+    </linearGradient>
+    <linearGradient id="ochre" x1="0" x2="1">
+      <stop offset="0%" stop-color="#cb8734"/>
+      <stop offset="100%" stop-color="#e4ae57"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" x2="1">
+      <stop offset="0%" stop-color="#266e68"/>
+      <stop offset="100%" stop-color="#4f9890"/>
+    </linearGradient>
+    <linearGradient id="plum" x1="0" x2="1">
+      <stop offset="0%" stop-color="#755367"/>
+      <stop offset="100%" stop-color="#9b7081"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#5e3929" flood-opacity=".16"/>
+    </filter>
+    <marker id="arrowInk" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#4f514d"/>
+    </marker>
+    <marker id="arrowTerracotta" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#bd5943"/>
+    </marker>
+    <style>
+      .sans { font-family: Inter, Avenir Next, Helvetica Neue, Arial, sans-serif; }
+      .eyebrow { font-size: 16px; font-weight: 800; letter-spacing: 2.8px; fill: #aa513d; }
+      .title { font-size: 49px; font-weight: 800; letter-spacing: -.9px; fill: #29343a; }
+      .subtitle { font-size: 19px; font-weight: 450; fill: #6d685f; }
+      .phase { font-size: 13px; font-weight: 800; letter-spacing: 2px; fill: #85776b; }
+      .card-title { font-size: 20px; font-weight: 800; fill: #2d383d; }
+      .card-copy { font-size: 14px; font-weight: 500; fill: #6d6a63; }
+      .step { font-size: 13px; font-weight: 850; fill: #fffaf2; }
+      .decision { font-size: 15px; font-weight: 800; fill: #fffaf2; text-anchor: middle; }
+      .tag { font-size: 11px; font-weight: 850; letter-spacing: 1.2px; }
+      .small { font-size: 12px; font-weight: 700; fill: #756e65; }
+      .store-title { font-size: 17px; font-weight: 800; fill: #2d383d; }
+      .store-copy { font-size: 13px; font-weight: 500; fill: #6d6a63; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1400" fill="url(#background)"/>
+  <rect width="1800" height="1400" fill="url(#warmGlow)"/>
+  <rect width="1800" height="1400" fill="url(#roseGlow)"/>
+  <g stroke="#a98e75" stroke-opacity=".14">
+    <path d="M100 237H1700M100 492H1700M100 747H1700M100 1002H1700M100 1225H1700"/>
+    <path d="M100 230V1225M330 230V1225M560 230V1225M790 230V1225M1020 230V1225M1250 230V1225M1480 230V1225M1700 230V1225"/>
+  </g>
+
+  <g class="sans">
+    <text x="100" y="79" class="eyebrow">HKMA PRUDENTIAL REGULATORY RAG SYSTEM</text>
+    <text x="100" y="138" class="title">Document intelligence → grounded decision support</text>
+    <text x="100" y="176" class="subtitle">The technical lifecycle from controlled source ingestion and embeddings to retrieved evidence, outputs, and evaluation.</text>
+    <g transform="translate(1327 82)">
+      <rect width="373" height="58" rx="29" fill="#fffaf2" stroke="#c67355" stroke-opacity=".55"/>
+      <circle cx="32" cy="29" r="9" fill="#bd5943"/>
+      <text x="53" y="35" class="small" fill="#6c4033">RETRIEVE • READ • DRAFT • VERIFY</text>
+    </g>
+
+    <text x="100" y="220" class="phase">A — CONTROLLED INGESTION &amp; INDEXING</text>
+    <text x="940" y="220" class="phase">B — QUERY, RETRIEVAL &amp; OUTPUT</text>
+
+    <!-- Ingestion lane -->
+    <g filter="url(#shadow)">
+      <rect x="100" y="265" width="340" height="150" rx="18" fill="#fffaf2" stroke="#c87961" stroke-opacity=".55"/>
+      <rect x="100" y="265" width="340" height="9" rx="4.5" fill="url(#terracotta)"/>
+      <circle cx="137" cy="310" r="17" fill="#bd5943"/><text x="133" y="315" class="step">1</text>
+      <text x="170" y="308" class="card-title">Register source documents</text>
+      <text x="170" y="336" class="card-copy">HKMA materials and approved internal artefacts</text>
+      <text x="170" y="360" class="card-copy">Authority, type, version, status and dates</text>
+      <rect x="122" y="379" width="128" height="23" rx="11.5" fill="#f6dfd3"/><text x="138" y="395" class="tag" fill="#a64a38">SOURCE CONTROL</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="510" y="265" width="340" height="150" rx="18" fill="#fffaf2" stroke="#d4a058" stroke-opacity=".65"/>
+      <rect x="510" y="265" width="340" height="9" rx="4.5" fill="url(#ochre)"/>
+      <circle cx="547" cy="310" r="17" fill="#cc8938"/><text x="543" y="315" class="step">2</text>
+      <text x="580" y="308" class="card-title">Extract and structure content</text>
+      <text x="580" y="336" class="card-copy">PDF text, headings, provisions, tables and pages</text>
+      <text x="580" y="360" class="card-copy">Retain source location and parent relationships</text>
+      <rect x="532" y="379" width="145" height="23" rx="11.5" fill="#f9e7c8"/><text x="548" y="395" class="tag" fill="#9d681d">STRUCTURE PARSE</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="920" y="265" width="340" height="150" rx="18" fill="#fffaf2" stroke="#d4a058" stroke-opacity=".65"/>
+      <rect x="920" y="265" width="340" height="9" rx="4.5" fill="url(#ochre)"/>
+      <circle cx="957" cy="310" r="17" fill="#cc8938"/><text x="953" y="315" class="step">3</text>
+      <text x="990" y="308" class="card-title">Create hierarchical chunks</text>
+      <text x="990" y="336" class="card-copy">Provision-level units plus parent section context</text>
+      <text x="990" y="360" class="card-copy">Preserve definitions, exceptions and references</text>
+      <rect x="942" y="379" width="138" height="23" rx="11.5" fill="#f9e7c8"/><text x="958" y="395" class="tag" fill="#9d681d">LEGAL CONTEXT</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="1330" y="265" width="370" height="150" rx="18" fill="#fffaf2" stroke="#4d928b" stroke-opacity=".62"/>
+      <rect x="1330" y="265" width="370" height="9" rx="4.5" fill="url(#teal)"/>
+      <circle cx="1367" cy="310" r="17" fill="#337b74"/><text x="1363" y="315" class="step">4</text>
+      <text x="1400" y="308" class="card-title">Index for hybrid retrieval</text>
+      <text x="1400" y="336" class="card-copy">Embeddings + lexical text + metadata filters</text>
+      <text x="1400" y="360" class="card-copy">Store retrievable chunks and parent context</text>
+      <rect x="1352" y="379" width="125" height="23" rx="11.5" fill="#dceeea"/><text x="1368" y="395" class="tag" fill="#2b716a">INDEX READY</text>
+    </g>
+    <path d="M440 340H510M850 340H920M1260 340H1330" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+
+    <!-- Stores -->
+    <g filter="url(#shadow)">
+      <rect x="235" y="485" width="500" height="132" rx="20" fill="#fdf8f0" stroke="#cbb19a" stroke-opacity=".7"/>
+      <text x="270" y="524" class="store-title">Structured source catalogue</text>
+      <text x="270" y="550" class="store-copy">Document identity • provenance • version history • effective date • status</text>
+      <text x="270" y="574" class="store-copy">Provision hierarchy • citations • source hashes • access controls</text>
+      <rect x="270" y="588" width="112" height="18" rx="9" fill="#f6dfd3"/><text x="284" y="601" class="tag" fill="#a64a38">METADATA STORE</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="940" y="485" width="625" height="132" rx="20" fill="#fdf8f0" stroke="#cbb19a" stroke-opacity=".7"/>
+      <text x="975" y="524" class="store-title">Regulatory knowledge index</text>
+      <text x="975" y="550" class="store-copy">Vector embeddings • lexical index • metadata filters • parent/adjacent provision links</text>
+      <text x="975" y="574" class="store-copy">Current implementation: Chroma vector store with metadata-aware chunk ingestion</text>
+      <rect x="975" y="588" width="105" height="18" rx="9" fill="#dceeea"/><text x="989" y="601" class="tag" fill="#2b716a">VECTOR STORE</text>
+      <rect x="1094" y="588" width="159" height="18" rx="9" fill="#f9e7c8"/><text x="1108" y="601" class="tag" fill="#9d681d">HYBRID: NEXT STAGE</text>
+    </g>
+    <path d="M270 415V485M1515 415V485" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+
+    <text x="100" y="690" class="phase">C — GROUNDED QUERY &amp; DELIVERY PATH</text>
+
+    <!-- Query lane -->
+    <g filter="url(#shadow)">
+      <rect x="100" y="730" width="300" height="150" rx="18" fill="#fffaf2" stroke="#c87961" stroke-opacity=".55"/>
+      <rect x="100" y="730" width="300" height="9" rx="4.5" fill="url(#terracotta)"/>
+      <circle cx="137" cy="775" r="17" fill="#bd5943"/><text x="133" y="780" class="step">5</text>
+      <text x="170" y="773" class="card-title">User starts a task</text>
+      <text x="170" y="801" class="card-copy">Question, change initiative,</text>
+      <text x="170" y="825" class="card-copy">or approved drafting request</text>
+      <rect x="122" y="844" width="100" height="23" rx="11.5" fill="#f6dfd3"/><text x="138" y="860" class="tag" fill="#a64a38">USER QUERY</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="470" y="730" width="340" height="150" rx="18" fill="#fffaf2" stroke="#d4a058" stroke-opacity=".65"/>
+      <rect x="470" y="730" width="340" height="9" rx="4.5" fill="url(#ochre)"/>
+      <circle cx="507" cy="775" r="17" fill="#cc8938"/><text x="503" y="780" class="step">6</text>
+      <text x="540" y="773" class="card-title">Understand and constrain query</text>
+      <text x="540" y="801" class="card-copy">Task type, jurisdiction, regulator, version,</text>
+      <text x="540" y="825" class="card-copy">date, organisational scope and permissions</text>
+      <rect x="492" y="844" width="150" height="23" rx="11.5" fill="#f9e7c8"/><text x="508" y="860" class="tag" fill="#9d681d">SCOPE FILTERS</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="880" y="730" width="370" height="150" rx="18" fill="#fffaf2" stroke="#4d928b" stroke-opacity=".62"/>
+      <rect x="880" y="730" width="370" height="9" rx="4.5" fill="url(#teal)"/>
+      <circle cx="917" cy="775" r="17" fill="#337b74"/><text x="913" y="780" class="step">7</text>
+      <text x="950" y="773" class="card-title">Retrieve and assemble evidence</text>
+      <text x="950" y="801" class="card-copy">Metadata filter → lexical + vector retrieval → rerank</text>
+      <text x="950" y="825" class="card-copy">Expand to parent, adjacent and referenced provisions</text>
+      <rect x="902" y="844" width="138" height="23" rx="11.5" fill="#dceeea"/><text x="918" y="860" class="tag" fill="#2b716a">HYBRID RAG</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <path d="M1485 736L1660 805L1485 874L1310 805Z" fill="#b85a43" stroke="#9e432f" stroke-width="2"/>
+      <text x="1485" y="797" class="decision">Evidence</text>
+      <text x="1485" y="818" class="decision">sufficient?</text>
+      <text x="1485" y="842" class="tag" fill="#ffe5d9" text-anchor="middle">ASSURANCE GATE</text>
+    </g>
+
+    <path d="M400 805H470M810 805H880M1250 805H1310" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <text x="1260" y="789" class="small">EVIDENCE SET</text>
+
+    <g filter="url(#shadow)">
+      <rect x="1065" y="985" width="365" height="150" rx="18" fill="#fffaf2" stroke="#8d687b" stroke-opacity=".6"/>
+      <rect x="1065" y="985" width="365" height="9" rx="4.5" fill="url(#plum)"/>
+      <circle cx="1102" cy="1030" r="17" fill="#805d70"/><text x="1098" y="1035" class="step">8</text>
+      <text x="1135" y="1028" class="card-title">Generate grounded response</text>
+      <text x="1135" y="1056" class="card-copy">Evidence-bound answer, report, option, or edit</text>
+      <text x="1135" y="1080" class="card-copy">Citations and uncertainty stated explicitly</text>
+      <rect x="1087" y="1099" width="141" height="23" rx="11.5" fill="#eadde3"/><text x="1103" y="1115" class="tag" fill="#755367">GROUNDED OUTPUT</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="610" y="985" width="365" height="150" rx="18" fill="#fffaf2" stroke="#c87961" stroke-opacity=".55"/>
+      <rect x="610" y="985" width="365" height="9" rx="4.5" fill="url(#terracotta)"/>
+      <circle cx="647" cy="1030" r="17" fill="#bd5943"/><text x="643" y="1035" class="step">9</text>
+      <text x="680" y="1028" class="card-title">Review and approve output</text>
+      <text x="680" y="1056" class="card-copy">User confirms impact scope, interpretation,</text>
+      <text x="680" y="1080" class="card-copy">and any policy or consultation artefact</text>
+      <rect x="632" y="1099" width="123" height="23" rx="11.5" fill="#f6dfd3"/><text x="648" y="1115" class="tag" fill="#a64a38">HUMAN REVIEW</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="155" y="985" width="365" height="150" rx="18" fill="#fffaf2" stroke="#4d928b" stroke-opacity=".62"/>
+      <rect x="155" y="985" width="365" height="9" rx="4.5" fill="url(#teal)"/>
+      <circle cx="192" cy="1030" r="17" fill="#337b74"/><text x="188" y="1035" class="step">10</text>
+      <text x="225" y="1028" class="card-title">Deliver and record outcome</text>
+      <text x="225" y="1056" class="card-copy">Approved answer, report, consultation, or redline</text>
+      <text x="225" y="1080" class="card-copy">Preserve evidence, approvals and rationale</text>
+      <rect x="177" y="1099" width="117" height="23" rx="11.5" fill="#dceeea"/><text x="193" y="1115" class="tag" fill="#2b716a">AUDIT TRAIL</text>
+    </g>
+
+    <path d="M1485 874V935H1248V985" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <path d="M1065 1060H975" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <path d="M610 1060H520" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <text x="1270" y="928" class="small">YES</text>
+    <path d="M1485 874V940H1515V665H1065V695" fill="none" stroke="#bd5943" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrowTerracotta)"/>
+    <text x="1220" y="686" class="small" fill="#a84d39">NO — refine filters, retrieve again, or state insufficient evidence</text>
+
+    <!-- Evaluation loop -->
+    <g filter="url(#shadow)">
+      <rect x="100" y="1205" width="1600" height="115" rx="20" fill="#fdf8f0" stroke="#cbb19a" stroke-opacity=".62"/>
+      <text x="130" y="1243" class="store-title">Evaluation and continuous improvement loop</text>
+      <text x="130" y="1269" class="store-copy">Evaluate retrieval recall, source/citation accuracy, change-detection coverage, policy-impact relevance, unsupported claims, and reviewer acceptance.</text>
+      <text x="130" y="1292" class="store-copy">Use historical HKMA version pairs: keep the later version outside retrieval, then compare system results with the held-out published outcome.</text>
+      <rect x="1380" y="1230" width="287" height="48" rx="24" fill="#eadde3"/><text x="1412" y="1260" class="tag" fill="#755367">FEEDBACK TO INDEX, RETRIEVAL &amp; PROMPTS</text>
+    </g>
+    <path d="M340 1135V1170C340 1182 340 1182 340 1205" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <path d="M1580 1205V1165H1515V670" fill="none" stroke="#bd5943" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrowTerracotta)"/>
+
+    <g transform="translate(100 1355)">
+      <rect width="22" height="12" rx="6" fill="#f6dfd3"/><text x="32" y="11" class="small">Input, governance and human review</text>
+      <rect x="305" width="22" height="12" rx="6" fill="#f9e7c8"/><text x="337" y="11" class="small">Parsing, context and query constraints</text>
+      <rect x="640" width="22" height="12" rx="6" fill="#dceeea"/><text x="672" y="11" class="small">Indexing, retrieval and records</text>
+      <rect x="938" width="22" height="12" rx="6" fill="#eadde3"/><text x="970" y="11" class="small">Grounded generation and learning</text>
+    </g>
+  </g>
+</svg>

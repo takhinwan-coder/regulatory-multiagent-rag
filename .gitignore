@@ -7,3 +7,5 @@ chroma_db/
 data/chroma_db/
 data/pdfs/**/*.pdf
 data/pdfs/*.pdf
+data/change_reports/
+data/scope_decisions/

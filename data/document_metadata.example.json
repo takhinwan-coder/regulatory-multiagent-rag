@@ -1,0 +1,17 @@
+{
+  "documents": [
+    {
+      "source": "hkma/CA-G-5-v1.pdf",
+      "document_id": "HKMA-SPM-CA-G-5",
+      "title": "Supervisory Policy Manual: CA-G-5",
+      "jurisdiction": "HK",
+      "regulator": "HKMA",
+      "document_type": "supervisory_policy_manual",
+      "version": "1.0",
+      "publication_date": "2022-01-01",
+      "effective_date": "2022-01-01",
+      "status": "superseded",
+      "superseded_by": "HKMA-SPM-CA-G-5-v2"
+    }
+  ]
+}

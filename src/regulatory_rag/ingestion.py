@@ -7,6 +7,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from regulatory_rag.config import Settings
+from regulatory_rag.metadata import load_document_metadata
 from regulatory_rag.vector_store import create_vector_store
 
 
@@ -23,14 +24,16 @@ def ingest_pdfs(settings: Settings) -> int:
     if not pdf_paths:
         raise FileNotFoundError(f"No PDF files found in {settings.pdf_directory}.")
 
+    metadata_by_source = load_document_metadata(settings.document_metadata_file)
     documents = []
     for pdf_path in pdf_paths:
         loaded = PyPDFLoader(str(pdf_path)).load()
+        source = str(pdf_path.relative_to(settings.pdf_directory))
+        source_metadata = metadata_by_source.get(source)
         for document in loaded:
-            try:
-                document.metadata["source"] = str(pdf_path.relative_to(settings.pdf_directory))
-            except ValueError:
-                document.metadata["source"] = str(pdf_path)
+            document.metadata["source"] = source
+            if source_metadata:
+                document.metadata.update(source_metadata.chroma_metadata())
             documents.append(document)
 
     splitter = RecursiveCharacterTextSplitter(

@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1400" viewBox="0 0 1800 1400" role="img" aria-labelledby="title description">
+  <title id="title">HKMA regulatory change management workflow</title>
+  <desc id="description">A complete human-governed workflow from HKMA regulatory version intake through comparison, hybrid retrieval, review, drafting, approval, and audit records.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fbf4e9"/>
+      <stop offset="52%" stop-color="#f7e9da"/>
+      <stop offset="100%" stop-color="#f4e4d4"/>
+    </linearGradient>
+    <radialGradient id="warmGlow" cx="0" cy="0" r="1" gradientTransform="translate(1535 150) rotate(135) scale(530 410)">
+      <stop offset="0%" stop-color="#e2a145" stop-opacity=".24"/>
+      <stop offset="100%" stop-color="#e2a145" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="roseGlow" cx="0" cy="0" r="1" gradientTransform="translate(220 1250) rotate(45) scale(540 420)">
+      <stop offset="0%" stop-color="#c7634b" stop-opacity=".14"/>
+      <stop offset="100%" stop-color="#c7634b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="terracotta" x1="0" x2="1">
+      <stop offset="0%" stop-color="#b94f3c"/>
+      <stop offset="100%" stop-color="#d6784e"/>
+    </linearGradient>
+    <linearGradient id="ochre" x1="0" x2="1">
+      <stop offset="0%" stop-color="#cb8734"/>
+      <stop offset="100%" stop-color="#e4ae57"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" x2="1">
+      <stop offset="0%" stop-color="#266e68"/>
+      <stop offset="100%" stop-color="#4f9890"/>
+    </linearGradient>
+    <linearGradient id="plum" x1="0" x2="1">
+      <stop offset="0%" stop-color="#755367"/>
+      <stop offset="100%" stop-color="#9b7081"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#5e3929" flood-opacity=".16"/>
+    </filter>
+    <marker id="arrowInk" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#4f514d"/>
+    </marker>
+    <marker id="arrowTerracotta" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#bd5943"/>
+    </marker>
+    <style>
+      .sans { font-family: Inter, Avenir Next, Helvetica Neue, Arial, sans-serif; }
+      .eyebrow { font-size: 16px; font-weight: 800; letter-spacing: 2.8px; fill: #aa513d; }
+      .title { font-size: 49px; font-weight: 800; letter-spacing: -.9px; fill: #29343a; }
+      .subtitle { font-size: 19px; font-weight: 450; fill: #6d685f; }
+      .phase { font-size: 13px; font-weight: 800; letter-spacing: 2px; fill: #85776b; }
+      .card-title { font-size: 20px; font-weight: 800; fill: #2d383d; }
+      .card-copy { font-size: 14px; font-weight: 500; fill: #6d6a63; }
+      .step { font-size: 13px; font-weight: 850; fill: #fffaf2; }
+      .decision { font-size: 15px; font-weight: 800; fill: #fffaf2; text-anchor: middle; }
+      .tag { font-size: 11px; font-weight: 850; letter-spacing: 1.2px; }
+      .small { font-size: 12px; font-weight: 700; fill: #756e65; }
+      .audit-title { font-size: 17px; font-weight: 800; fill: #2d383d; }
+      .audit-copy { font-size: 13px; font-weight: 500; fill: #6d6a63; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1400" fill="url(#background)"/>
+  <rect width="1800" height="1400" fill="url(#warmGlow)"/>
+  <rect width="1800" height="1400" fill="url(#roseGlow)"/>
+  <g stroke="#a98e75" stroke-opacity=".14">
+    <path d="M100 237H1700M100 492H1700M100 747H1700M100 1002H1700M100 1225H1700"/>
+    <path d="M100 230V1225M330 230V1225M560 230V1225M790 230V1225M1020 230V1225M1250 230V1225M1480 230V1225M1700 230V1225"/>
+  </g>
+
+  <g class="sans">
+    <text x="100" y="79" class="eyebrow">HKMA PRUDENTIAL REGULATORY CHANGE MANAGEMENT</text>
+    <text x="100" y="138" class="title">Regulatory signal → controlled action</text>
+    <text x="100" y="176" class="subtitle">A complete, evidence-led workflow with human decisions at every consequential point.</text>
+    <g transform="translate(1327 82)">
+      <rect width="373" height="58" rx="29" fill="#fffaf2" stroke="#c67355" stroke-opacity=".55"/>
+      <circle cx="32" cy="29" r="9" fill="#bd5943"/>
+      <text x="53" y="35" class="small" fill="#6c4033">RETRIEVE • READ • DRAFT • VERIFY</text>
+    </g>
+
+    <text x="100" y="220" class="phase">01 — INTAKE &amp; CONTROL</text>
+    <text x="600" y="220" class="phase">02 — FIND &amp; ASSESS</text>
+    <text x="1115" y="220" class="phase">03 — REVIEW &amp; DELIVER</text>
+
+    <!-- Primary workflow: rows one and two form a single continuous path. -->
+    <g filter="url(#shadow)">
+      <rect x="100" y="265" width="340" height="150" rx="18" fill="#fffaf2" stroke="#c87961" stroke-opacity=".55"/>
+      <rect x="100" y="265" width="340" height="9" rx="4.5" fill="url(#terracotta)"/>
+      <circle cx="137" cy="310" r="17" fill="#bd5943"/><text x="133" y="315" class="step">1</text>
+      <text x="170" y="308" class="card-title">Select regulatory trigger</text>
+      <text x="170" y="336" class="card-copy">New rule, consultation, or review request</text>
+      <text x="170" y="360" class="card-copy">Set HKMA instrument and business scope</text>
+      <rect x="122" y="379" width="115" height="23" rx="11.5" fill="#f6dfd3"/><text x="138" y="395" class="tag" fill="#a64a38">USER INPUT</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="510" y="265" width="340" height="150" rx="18" fill="#fffaf2" stroke="#c87961" stroke-opacity=".55"/>
+      <rect x="510" y="265" width="340" height="9" rx="4.5" fill="url(#terracotta)"/>
+      <circle cx="547" cy="310" r="17" fill="#bd5943"/><text x="543" y="315" class="step">2</text>
+      <text x="580" y="308" class="card-title">Validate source versions</text>
+      <text x="580" y="336" class="card-copy">Authority, status, publication and effective dates</text>
+      <text x="580" y="360" class="card-copy">Record old / new version relationship</text>
+      <rect x="532" y="379" width="154" height="23" rx="11.5" fill="#f6dfd3"/><text x="548" y="395" class="tag" fill="#a64a38">PROVENANCE</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="920" y="265" width="340" height="150" rx="18" fill="#fffaf2" stroke="#d4a058" stroke-opacity=".65"/>
+      <rect x="920" y="265" width="340" height="9" rx="4.5" fill="url(#ochre)"/>
+      <circle cx="957" cy="310" r="17" fill="#cc8938"/><text x="953" y="315" class="step">3</text>
+      <text x="990" y="308" class="card-title">Compare source versions</text>
+      <text x="990" y="336" class="card-copy">Deterministic text and provision comparison</text>
+      <text x="990" y="360" class="card-copy">Create a traceable change register</text>
+      <rect x="942" y="379" width="131" height="23" rx="11.5" fill="#f9e7c8"/><text x="958" y="395" class="tag" fill="#9d681d">CHANGE DIFF</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="1330" y="265" width="370" height="150" rx="18" fill="#fffaf2" stroke="#d4a058" stroke-opacity=".65"/>
+      <rect x="1330" y="265" width="370" height="9" rx="4.5" fill="url(#ochre)"/>
+      <circle cx="1367" cy="310" r="17" fill="#cc8938"/><text x="1363" y="315" class="step">4</text>
+      <text x="1400" y="308" class="card-title">Interpret the regulatory change</text>
+      <text x="1400" y="336" class="card-copy">Obligation • actor • deadline • exception</text>
+      <text x="1400" y="360" class="card-copy">Expand to definitions and linked provisions</text>
+      <rect x="1352" y="379" width="151" height="23" rx="11.5" fill="#f9e7c8"/><text x="1368" y="395" class="tag" fill="#9d681d">FULL CONTEXT</text>
+    </g>
+
+    <path d="M440 340H510M850 340H920M1260 340H1330" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="1330" y="520" width="370" height="150" rx="18" fill="#fffaf2" stroke="#4d928b" stroke-opacity=".62"/>
+      <rect x="1330" y="520" width="370" height="9" rx="4.5" fill="url(#teal)"/>
+      <circle cx="1367" cy="565" r="17" fill="#337b74"/><text x="1363" y="570" class="step">5</text>
+      <text x="1400" y="563" class="card-title">Map candidate policy impacts</text>
+      <text x="1400" y="591" class="card-copy">Hybrid search: metadata + lexical + semantic</text>
+      <text x="1400" y="615" class="card-copy">Rerank and retrieve complete policy context</text>
+      <rect x="1352" y="634" width="138" height="23" rx="11.5" fill="#dceeea"/><text x="1368" y="650" class="tag" fill="#2b716a">HYBRID RAG</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <path d="M1055 526L1230 595L1055 664L880 595Z" fill="#b85a43" stroke="#9e432f" stroke-width="2"/>
+      <text x="1055" y="587" class="decision">Scope</text>
+      <text x="1055" y="608" class="decision">approved?</text>
+      <text x="1055" y="632" class="tag" fill="#ffe5d9" text-anchor="middle">HUMAN GATE</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="445" y="520" width="340" height="150" rx="18" fill="#fffaf2" stroke="#4d928b" stroke-opacity=".62"/>
+      <rect x="445" y="520" width="340" height="9" rx="4.5" fill="url(#teal)"/>
+      <circle cx="482" cy="565" r="17" fill="#337b74"/><text x="478" y="570" class="step">6</text>
+      <text x="515" y="563" class="card-title">Analyse approved scope</text>
+      <text x="515" y="591" class="card-copy">Regulatory evidence + internal policy context</text>
+      <text x="515" y="615" class="card-copy">Classify impact and implementation options</text>
+      <rect x="467" y="634" width="145" height="23" rx="11.5" fill="#dceeea"/><text x="483" y="650" class="tag" fill="#2b716a">IMPACT ANALYSIS</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="100" y="520" width="275" height="150" rx="18" fill="#fffaf2" stroke="#8d687b" stroke-opacity=".6"/>
+      <rect x="100" y="520" width="275" height="9" rx="4.5" fill="url(#plum)"/>
+      <circle cx="137" cy="565" r="17" fill="#805d70"/><text x="133" y="570" class="step">7</text>
+      <text x="170" y="563" class="card-title">Draft the output</text>
+      <text x="170" y="591" class="card-copy">Q&amp;A • impact register •</text>
+      <text x="170" y="615" class="card-copy">consultation • policy redline</text>
+      <rect x="122" y="634" width="127" height="23" rx="11.5" fill="#eadde3"/><text x="138" y="650" class="tag" fill="#755367">DRAFT OPTIONS</text>
+    </g>
+
+    <path d="M1515 415V490C1515 505 1515 505 1515 520" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <path d="M1330 595H1230" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <path d="M880 595H785" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <path d="M445 595H375" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <text x="1260" y="579" class="small">YES</text>
+    <path d="M1055 664V705H1515V690" fill="none" stroke="#bd5943" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrowTerracotta)"/>
+    <text x="1120" y="697" class="small" fill="#a84d39">NO — refine or add scope</text>
+
+    <text x="100" y="742" class="phase">04 — ASSURANCE, RELEASE &amp; LEARNING</text>
+
+    <g filter="url(#shadow)">
+      <rect x="100" y="785" width="340" height="150" rx="18" fill="#fffaf2" stroke="#c87961" stroke-opacity=".55"/>
+      <rect x="100" y="785" width="340" height="9" rx="4.5" fill="url(#terracotta)"/>
+      <circle cx="137" cy="830" r="17" fill="#bd5943"/><text x="133" y="835" class="step">8</text>
+      <text x="170" y="828" class="card-title">Check evidence and consistency</text>
+      <text x="170" y="856" class="card-copy">Verify each material claim and proposed edit</text>
+      <text x="170" y="880" class="card-copy">Flag conflicts, gaps, and uncertainty</text>
+      <rect x="122" y="899" width="145" height="23" rx="11.5" fill="#f6dfd3"/><text x="138" y="915" class="tag" fill="#a64a38">EVIDENCE CHECK</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <path d="M650 791L825 860L650 929L475 860Z" fill="#b85a43" stroke="#9e432f" stroke-width="2"/>
+      <text x="650" y="852" class="decision">Reviewer</text>
+      <text x="650" y="873" class="decision">approves?</text>
+      <text x="650" y="897" class="tag" fill="#ffe5d9" text-anchor="middle">HUMAN GATE</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="860" y="785" width="340" height="150" rx="18" fill="#fffaf2" stroke="#4d928b" stroke-opacity=".62"/>
+      <rect x="860" y="785" width="340" height="9" rx="4.5" fill="url(#teal)"/>
+      <circle cx="897" cy="830" r="17" fill="#337b74"/><text x="893" y="835" class="step">9</text>
+      <text x="930" y="828" class="card-title">Release approved output</text>
+      <text x="930" y="856" class="card-copy">Answer • report • consultation • redline</text>
+      <text x="930" y="880" class="card-copy">No output is released without reviewer approval</text>
+      <rect x="882" y="899" width="121" height="23" rx="11.5" fill="#dceeea"/><text x="898" y="915" class="tag" fill="#2b716a">RELEASED</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="1280" y="785" width="420" height="150" rx="18" fill="#fffaf2" stroke="#8d687b" stroke-opacity=".6"/>
+      <rect x="1280" y="785" width="420" height="9" rx="4.5" fill="url(#plum)"/>
+      <circle cx="1317" cy="830" r="17" fill="#805d70"/><text x="1313" y="835" class="step">10</text>
+      <text x="1350" y="828" class="card-title">Preserve the audit trail</text>
+      <text x="1350" y="856" class="card-copy">Versions • evidence • scope decisions • reviews</text>
+      <text x="1350" y="880" class="card-copy">Outputs • rationale • approvals • evaluation record</text>
+      <rect x="1302" y="899" width="116" height="23" rx="11.5" fill="#eadde3"/><text x="1318" y="915" class="tag" fill="#755367">AUDIT RECORD</text>
+    </g>
+
+    <path d="M237 670V755C237 770 270 770 270 785" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <path d="M440 860H475" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <path d="M825 860H860" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <path d="M1200 860H1280" fill="none" stroke="#5b5750" stroke-width="2.5" marker-end="url(#arrowInk)"/>
+    <text x="833" y="844" class="small">YES</text>
+    <path d="M650 929V975H270V945" fill="none" stroke="#bd5943" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrowTerracotta)"/>
+    <text x="396" y="967" class="small" fill="#a84d39">NO — revise analysis or draft</text>
+
+    <!-- Supporting controls and evaluation loop -->
+    <g filter="url(#shadow)">
+      <rect x="100" y="1055" width="1600" height="130" rx="20" fill="#fdf8f0" stroke="#cbb19a" stroke-opacity=".62"/>
+      <text x="130" y="1091" class="audit-title">Always-on controls</text>
+      <path d="M465 1075V1165M835 1075V1165M1205 1075V1165" stroke="#ccb9a8" stroke-opacity=".62"/>
+      <text x="500" y="1091" class="audit-title">Evidence traceability</text>
+      <text x="500" y="1117" class="audit-copy">Source, version, provision, page and context</text>
+      <text x="500" y="1138" class="audit-copy">travel with every material conclusion.</text>
+      <text x="870" y="1091" class="audit-title">Scoped agent roles</text>
+      <text x="870" y="1117" class="audit-copy">Each stage has constrained tools, inputs,</text>
+      <text x="870" y="1138" class="audit-copy">outputs, and evidence requirements.</text>
+      <text x="1240" y="1091" class="audit-title">Held-out version evaluation</text>
+      <text x="1240" y="1117" class="audit-copy">Compare detected change and drafting intent</text>
+      <text x="1240" y="1138" class="audit-copy">against a later HKMA version excluded from retrieval.</text>
+    </g>
+
+    <g transform="translate(100 1245)">
+      <rect width="22" height="12" rx="6" fill="#f6dfd3"/><text x="32" y="11" class="small">Human decision / assurance</text>
+      <rect x="260" width="22" height="12" rx="6" fill="#f9e7c8"/><text x="292" y="11" class="small">Regulatory analysis</text>
+      <rect x="490" width="22" height="12" rx="6" fill="#dceeea"/><text x="522" y="11" class="small">Retrieval and impact work</text>
+      <rect x="765" width="22" height="12" rx="6" fill="#eadde3"/><text x="797" y="11" class="small">Drafting, audit, and records</text>
+    </g>
+    <text x="100" y="1322" class="small">Solid path = approved progression   •   Dashed path = reviewer-directed rework   •   This SVG is a living workflow artefact.</text>
+  </g>
+</svg>
