@@ -158,10 +158,19 @@
           <mxGeometry height="290" width="880" x="750" y="10" as="geometry" />
         </mxCell>
         <mxCell id="pMj7Xkz5I8tPxx53g8yt-71" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;SKILLS.MD&lt;/span&gt;&lt;/h1&gt;" vertex="1">
-          <mxGeometry height="324.37" width="360" x="80" y="780" as="geometry" />
+          <mxGeometry height="324.37" width="310" x="80" y="780" as="geometry" />
         </mxCell>
-        <mxCell id="pMj7Xkz5I8tPxx53g8yt-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;SKILLS.MD&lt;/span&gt;&lt;/h1&gt;" vertex="1">
-          <mxGeometry height="324.37" width="613" x="467" y="780" as="geometry" />
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;RAG&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="324.37" width="310" x="417" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-73" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;MEMORY&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="324.37" width="310" x="760" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-74" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;MCP&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="252.19" width="300" x="100" y="27.81" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-75" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Drafting&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="252.19" width="300" x="808" y="27.810000000000002" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
