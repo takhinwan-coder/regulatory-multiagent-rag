@@ -1,0 +1,51 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="eAxjj6jSEr4qH7mQVf4C">
+    <mxGraphModel dx="1414" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="830" width="400" x="1240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-29" parent="1" style="swimlane;html=1;startSize=20;horizontal=0;resizable=0;fontSize=12;transparentBounds=1;groupPadding=20 588 160 20;containerType=tree;childLayout=%5B%7B%22layout%22%3A%22elkLayered%22%2C%22config%22%3A%7B%22elk.direction%22%3A%22RIGHT%22%2C%22elk.layered.spacing.nodeNodeBetweenLayers%22%3A%2250%22%2C%22elk.layered.considerModelOrder.strategy%22%3A%22NODES_AND_EDGES%22%2C%22elk.padding%22%3A%22%5Btop%3D20%2Cleft%3D40%2Cbottom%3D20%2Cright%3D20%5D%22%2C%22edgeStyle%22%3A%22orthogonalEdgeStyle%22%2C%22corners%22%3A%22rounded%22%2C%22extractIsolated%22%3Afalse%2C%22resizeLayoutRoot%22%3Atrue%2C%22resizeNodes%22%3Afalse%7D%7D%5D;" value="Layout Container" vertex="1">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-45" parent="cBNrWaHzSaKR6YTVP6Dy-29" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" value="User Prompt" vertex="1">
+          <mxGeometry height="100" width="120" x="90" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-49" edge="1" parent="cBNrWaHzSaKR6YTVP6Dy-29" source="cBNrWaHzSaKR6YTVP6Dy-46" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;curved=0;exitX=1;exitY=0.5;" target="cBNrWaHzSaKR6YTVP6Dy-47">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="226" y="230" />
+              <mxPoint x="226" y="109.5" />
+              <mxPoint x="260" y="109.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-46" parent="cBNrWaHzSaKR6YTVP6Dy-29" style="shape=wedgeCallout;whiteSpace=wrap;html=1;" value="System Prompt" vertex="1">
+          <mxGeometry height="80" width="120" x="90" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-47" parent="cBNrWaHzSaKR6YTVP6Dy-29" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;" value="Working Memory /&amp;nbsp;&lt;div&gt;Context RAM&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="281" y="69.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-48" edge="1" parent="cBNrWaHzSaKR6YTVP6Dy-29" source="cBNrWaHzSaKR6YTVP6Dy-45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;curved=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5063;" target="cBNrWaHzSaKR6YTVP6Dy-47" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="245" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-50" parent="cBNrWaHzSaKR6YTVP6Dy-29" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;folderSymbol=triangle;whiteSpace=wrap;" value="LLM - Working Agent&lt;div&gt;(GPT, Claude, OpenWeights)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="198" x="452" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-51" edge="1" parent="cBNrWaHzSaKR6YTVP6Dy-29" source="cBNrWaHzSaKR6YTVP6Dy-47" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;curved=0;exitX=1;exitY=0.5063;entryX=0;entryY=0.5;" target="cBNrWaHzSaKR6YTVP6Dy-50" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="427" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
