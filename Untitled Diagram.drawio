@@ -1,11 +1,11 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="eAxjj6jSEr4qH7mQVf4C">
-    <mxGraphModel dx="1704" dy="895" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2438" dy="2450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="" vertex="1">
-          <mxGeometry height="830" width="400" x="1230" y="160" as="geometry" />
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-64" parent="1" style="rounded=1;html=1;roundedPerimeter=1;fillColor=none;strokeColor=#FF0000;dashed=1;strokeWidth=4;perimeterSpacing=9;opacity=80;opacityGroup=1;" value="" vertex="1">
+          <mxGeometry height="360" width="390" x="50" y="352.18" as="geometry" />
         </mxCell>
         <mxCell id="pMj7Xkz5I8tPxx53g8yt-20" connectable="0" parent="1" style="swimlane;html=1;startSize=20;horizontal=0;resizable=0;fontSize=12;transparentBounds=1;groupPadding=20;containerType=tree;childLayout=%5B%7B%22layout%22%3A%22elkLayered%22%2C%22config%22%3A%7B%22elk.direction%22%3A%22RIGHT%22%2C%22elk.layered.spacing.nodeNodeBetweenLayers%22%3A%2250%22%2C%22elk.layered.considerModelOrder.strategy%22%3A%22NODES_AND_EDGES%22%2C%22elk.padding%22%3A%22%5Btop%3D20%2Cleft%3D40%2Cbottom%3D20%2Cright%3D20%5D%22%2C%22edgeStyle%22%3A%22orthogonalEdgeStyle%22%2C%22corners%22%3A%22rounded%22%2C%22extractIsolated%22%3Afalse%2C%22resizeLayoutRoot%22%3Atrue%2C%22resizeNodes%22%3Afalse%7D%7D%5D;" value="" vertex="1">
           <mxGeometry as="geometry" />
@@ -76,6 +76,131 @@
               <mxPoint x="957" y="614.37" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-62" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="830" width="490" x="1140" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cBNrWaHzSaKR6YTVP6Dy-4" parent="pMj7Xkz5I8tPxx53g8yt-62" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="830" width="490" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-44" edge="1" parent="pMj7Xkz5I8tPxx53g8yt-62" source="pMj7Xkz5I8tPxx53g8yt-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="pMj7Xkz5I8tPxx53g8yt-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-45" edge="1" parent="pMj7Xkz5I8tPxx53g8yt-62" source="pMj7Xkz5I8tPxx53g8yt-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="pMj7Xkz5I8tPxx53g8yt-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-40" parent="pMj7Xkz5I8tPxx53g8yt-62" style="html=1;dashed=0;whiteSpace=wrap;" value="Trace&lt;div&gt;(Langfuse, LangSmith)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="170" x="30" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-48" edge="1" parent="pMj7Xkz5I8tPxx53g8yt-62" source="pMj7Xkz5I8tPxx53g8yt-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="pMj7Xkz5I8tPxx53g8yt-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-41" parent="pMj7Xkz5I8tPxx53g8yt-62" style="html=1;dashed=0;whiteSpace=wrap;" value="Evaluation (Was it good?)&lt;div&gt;&quot;LLM-as-a-judge&quot; -&amp;gt; scores&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="205" x="245" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-47" edge="1" parent="pMj7Xkz5I8tPxx53g8yt-62" source="pMj7Xkz5I8tPxx53g8yt-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="pMj7Xkz5I8tPxx53g8yt-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-43" parent="pMj7Xkz5I8tPxx53g8yt-62" style="html=1;dashed=0;whiteSpace=wrap;" value="Observe (Was it healthy?)&lt;div&gt;Tracks tokens, latency, errors&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="205" x="245" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-51" edge="1" parent="pMj7Xkz5I8tPxx53g8yt-62" source="pMj7Xkz5I8tPxx53g8yt-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="pMj7Xkz5I8tPxx53g8yt-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-46" parent="pMj7Xkz5I8tPxx53g8yt-62" style="html=1;dashed=0;whiteSpace=wrap;" value="Diagnose&lt;div&gt;&quot;Where/why it was broken?&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="205" x="245" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-58" edge="1" parent="pMj7Xkz5I8tPxx53g8yt-62" source="pMj7Xkz5I8tPxx53g8yt-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="pMj7Xkz5I8tPxx53g8yt-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-59" connectable="0" parent="pMj7Xkz5I8tPxx53g8yt-58" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="Evaluation Passed" vertex="1">
+          <mxGeometry relative="1" x="-0.2505" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-60" edge="1" parent="pMj7Xkz5I8tPxx53g8yt-62" source="pMj7Xkz5I8tPxx53g8yt-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="pMj7Xkz5I8tPxx53g8yt-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-61" connectable="0" parent="pMj7Xkz5I8tPxx53g8yt-60" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="Evaluation not passed&lt;div&gt;-&amp;gt; fix bugs&lt;/div&gt;&lt;div&gt;-&amp;gt;rerun&lt;/div&gt;&lt;div&gt;-&amp;gt; re-trace&lt;/div&gt;&lt;div&gt;-&amp;gt; reevaluate&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0338" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-49" parent="pMj7Xkz5I8tPxx53g8yt-62" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;size=0.25" value="Gate" vertex="1">
+          <mxGeometry height="50" width="100" x="297.5" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-54" parent="pMj7Xkz5I8tPxx53g8yt-62" style="html=1;dashed=0;whiteSpace=wrap;" value="Release&lt;div&gt;- Ship the fix safely&lt;/div&gt;&lt;div&gt;- new prompt version&lt;/div&gt;&lt;div&gt;- model config, tool change&lt;/div&gt;&lt;div&gt;- RAG param (topick)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="205" x="245" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-56" edge="1" parent="1" source="pMj7Xkz5I8tPxx53g8yt-54" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1040" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-57" connectable="0" parent="pMj7Xkz5I8tPxx53g8yt-56" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="Improved System Prompt + Config" vertex="1">
+          <mxGeometry relative="1" x="-0.1278" y="-2" as="geometry">
+            <mxPoint x="-17" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-66" parent="1" style="rounded=1;html=1;roundedPerimeter=1;fillColor=none;strokeColor=#FF3333;dashed=1;strokeWidth=4;perimeterSpacing=9;opacity=80;opacityGroup=1;" value="" vertex="1">
+          <mxGeometry height="405" width="1058" x="50" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-67" parent="1" style="rounded=1;html=1;roundedPerimeter=1;fillColor=none;strokeColor=#3399FF;dashed=1;strokeWidth=4;perimeterSpacing=9;opacity=80;opacityGroup=1;" value="" vertex="1">
+          <mxGeometry height="360" width="290" x="450" y="352.18" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-68" parent="1" style="rounded=1;html=1;roundedPerimeter=1;fillColor=none;strokeColor=#00CC66;dashed=1;strokeWidth=4;perimeterSpacing=9;opacity=80;opacityGroup=1;" value="" vertex="1">
+          <mxGeometry height="360" width="348" x="760" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-69" parent="1" style="rounded=1;html=1;roundedPerimeter=1;fillColor=none;strokeColor=#3399FF;dashed=1;strokeWidth=4;perimeterSpacing=9;opacity=80;opacityGroup=1;" value="" vertex="1">
+          <mxGeometry height="290" width="680" x="50" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-70" parent="1" style="rounded=1;html=1;roundedPerimeter=1;fillColor=none;strokeColor=#00CC66;dashed=1;strokeWidth=4;perimeterSpacing=9;opacity=80;opacityGroup=1;" value="" vertex="1">
+          <mxGeometry height="290" width="890" x="750" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-71" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;SKILLS.MD&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="324.37" width="310" x="80" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;RAG&lt;/span&gt;&lt;/h1&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="324.37" width="310" x="417" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-73" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;MEMORY&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="324.37" width="310" x="760" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-74" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;MCP&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="252.19" width="300" x="100" y="27.81" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-75" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Drafting Agent&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="252.19" width="260" x="808" y="27.81" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-76" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Research Agent&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="252.19" width="260" x="1085" y="28.91" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-77" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;TOOLS&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="252.19" width="300" x="410" y="28.909999999999997" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-78" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;div&gt;(decesion needed)&lt;/div&gt;1. Vector DB?&lt;div&gt;- best for multi vector&lt;br&gt;&lt;div&gt;2. Vector Index?&lt;/div&gt;&lt;div&gt;- extract similar vector index&lt;/div&gt;&lt;div&gt;3. Keyword Search?&lt;/div&gt;&lt;div&gt;- exact match needed&lt;/div&gt;&lt;div&gt;4. No Retrieval? (put all into context window)&lt;/div&gt;&lt;div&gt;- best for easy task - -ve lower accuracy/higher token/ likely hallucination&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;REF: https://www.youtube.com/watch?v=rXFV1ivDe6c&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="260" x="450" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-79" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Coordinate Agent&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="252.19" width="260" x="1357.5" y="28.909999999999997" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-81" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Multi-agent consideation:&lt;br&gt;1. Single agent with many tools: one agent decides everything in one main context.&amp;nbsp;&lt;div&gt;2. Single agent with sub-prompts: separate LLM calls, but centrally controlled and not necessarily agents.&amp;nbsp;&lt;/div&gt;&lt;div&gt;3. Multi-agent: multiple role/state-bearing components can decide, act, exchange outputs, and sometimes challenge or delegate to one another.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="767.5" x="850" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-82" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="Specialised the SOP/protocol for LLM to read and follow.&lt;br&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="260" x="105" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-83" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="&lt;div&gt;&lt;div&gt;short-term memory the LLM store (agent&#39;s learning?)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="260" x="785" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-84" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="External vs Internal Servers to be called by the LLM" vertex="1">
+          <mxGeometry height="130" width="570" x="120" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-85" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;table class=&quot;w-full divide-y divide-border&quot;&gt;&lt;thead class=&quot;bg-muted/80&quot;&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;th class=&quot;whitespace-nowrap px-4 py-2 text-left font-semibold text-sm&quot;&gt;Component&lt;/th&gt;&lt;th class=&quot;whitespace-nowrap px-4 py-2 text-left font-semibold text-sm&quot; style=&quot;text-align: right;&quot;&gt;Separate agent needed?&lt;/th&gt;&lt;th class=&quot;whitespace-nowrap px-4 py-2 text-left font-semibold text-sm&quot;&gt;Recommendation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody class=&quot;divide-y divide-border&quot;&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Task classification&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot; style=&quot;text-align: right;&quot;&gt;Usually no&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Rules or a small LLM call&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Skill selection&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot; style=&quot;text-align: right;&quot;&gt;Usually no&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Metadata-based routing, possibly assisted by an LLM&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;RAG retrieval&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot; style=&quot;text-align: right;&quot;&gt;No&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Retrieval service with access controls&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Memory retrieval&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot; style=&quot;text-align: right;&quot;&gt;No&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Dedicated memory service and filtering&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Planning and execution&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot; style=&quot;text-align: right;&quot;&gt;&lt;span class=&quot;font-semibold&quot;&gt;Yes, one main agent&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Primary worker with dynamically exposed tools&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Tool execution&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot; style=&quot;text-align: right;&quot;&gt;No&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;MCP servers or ordinary tool services&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Output review&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot; style=&quot;text-align: right;&quot;&gt;Sometimes&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Separate reviewer for important or complex work&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Metrics and tracing&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot; style=&quot;text-align: right;&quot;&gt;No&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Observability infrastructure&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;border-border&quot;&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Prompt/tool improvement&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot; style=&quot;text-align: right;&quot;&gt;No runtime agent required&lt;/td&gt;&lt;td class=&quot;px-4 py-2 text-sm&quot;&gt;Offline evaluation and governed deployment&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="280" width="560" x="1085" y="-290" as="geometry" />
+        </mxCell>
+        <mxCell id="pMj7Xkz5I8tPxx53g8yt-86" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="LLM suggested" vertex="1">
+          <mxGeometry height="30" width="220" x="840" y="-210" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
