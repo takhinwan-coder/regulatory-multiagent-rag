@@ -186,3 +186,28 @@ python -m regulatory_rag.cli ask "What are the main reporting obligations?"
 ```
 
 The commands exercise the existing single-agent RAG baseline; they do not run a multi-agent change analysis or LLMOps evaluation.
+
+Objective
+The financial regulatory environment is becoming increasingly complex due to technological innovation, evolving financial products and frequent policy developments across jurisdictions. Both regulated entities and regulatory bodies face significant burdens in monitoring regulatory developments, conducting gap analyses, maintaining policies and drafting consultation or governance documents.
+This project proposes a multi-agent RAG system to support human-led regulatory policy change management. The system would reduce repetitive research, drafting and editing work, while improving the consistency, traceability and timeliness of regulatory analysis. The intent is to remain legal or policy decisions subject to human review and approval, while automate policy ground works.
+Scope
+List what our project will consists.
+Schedule of implementation
+Basic pipeline excl. evaluation 
+-	Architecture + coding standards + prompt templates 
+-	Working agent
+o	To build function calls to Plan-and-Execute vs. ReAct
+-	RAG & database management
+o	chunking and embedding internal documents into index vector (prelim direction as vectorDB will turn all into meaning, but for laws or contracts we prefer exact terminology, hence we prefer using index vector to find similar concepts then extract in full to see exact wording and amend word by word)
+o	to build function calls to retrieve data
+-	Supporting tools
+o	To build function calls incl. comparing, drafting, assessing, summarising (can be by skills.md)
+-	evaluation
+o	To build function calls trace, evaluate, diagnose using langfuse/langsmith, and release the improvement
+
+1st phrase – Dec 2026
+2nd phrase – Jan 2026
+3rd phrase – Feb 2026
+4th phrase – Mar 2026
+
+
