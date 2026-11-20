@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="zDNqpdsGV3lGMyzmXG_N">
-    <mxGraphModel dx="2438" dy="2450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1704" dy="2064" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -202,7 +202,7 @@
         <mxCell id="sF5r0jzN0w6YDKWzCAvA-54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="LLM suggested" vertex="1">
           <mxGeometry height="30" width="220" x="880" y="-170" as="geometry" />
         </mxCell>
-        <mxCell id="sF5r0jzN0w6YDKWzCAvA-56" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="FAQ&lt;div&gt;RAG&lt;/div&gt;&lt;div&gt;1. why vector DB / &lt;b&gt;vector index&lt;/b&gt; / keyword search / no retrieval is selected?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="sF5r0jzN0w6YDKWzCAvA-56" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="FAQ&lt;div&gt;&lt;b&gt;RAG&lt;/b&gt;&lt;/div&gt;&lt;div&gt;1. Why vector DB / &lt;b&gt;vector index&lt;/b&gt; / keyword search / no retrieval is selected?&lt;/div&gt;&lt;div&gt;&lt;b&gt;AI harness&lt;/b&gt;&lt;/div&gt;&lt;div&gt;1. Why do we build our own AI harness instead of a MCP / API to leverage existing AI harness&lt;/div&gt;&lt;div&gt;We consider the approach can lead to a better governance and efficiency framework. First, it avoid prompting injection from AI harness of the user in affecting the design orchestra of this project, which may influence the specific use of a&amp;nbsp;deliberate tools calling. Second, it reduce unnecessary use of the user&#39;s AI harness for efficiency boosting.&lt;/div&gt;&lt;div&gt;&lt;b&gt;Single/Multi Agent&lt;/b&gt;&lt;/div&gt;&lt;div&gt;1.&amp;nbsp;&lt;/div&gt;" vertex="1">
           <mxGeometry height="270" width="965" x="120" y="1280" as="geometry" />
         </mxCell>
       </root>
